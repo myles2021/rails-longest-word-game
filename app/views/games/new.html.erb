@@ -1,0 +1,13 @@
+<h1>Play the game by creating a word from the letters below</h1>
+
+<%= @letters.each do |letter| %>
+  <span><%= letter %></span>
+<% end %>
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :random_letter, @letters %>
+  <%= hidden_field_tag :time, @time %>
+  <input type="text" name="answer" placeholder="Enter a word...">
+  <input type="submit" value="Play">
+</form>

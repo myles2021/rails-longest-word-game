@@ -1,0 +1,10 @@
+<% if @included %>
+<h1>the letters of your answer are included in the randonly generated letters</h1>
+  <% if @english_word %>
+  <h1>The user's answer is an english word</h1>
+  <% else %>
+  <h1>The user's answer isn't an english word</h1>
+  <% end %>
+<% else %>
+<h1>the letters of your answer aren't included in the randonly generated letters</h1>
+<% end %>
